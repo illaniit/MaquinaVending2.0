@@ -428,7 +428,26 @@ namespace MaquinaVending2._0 {
 		}
 		public void AñadirExistencias() {
 			int Id_Introducido = 0; //Ponemos un id para que el usuario selecione el producto después del foreach
-			foreach(Productos p in )
+			string productocargado = "no"; 
+			foreach(Productos p in ListaProductos) {
+				p.MostrarDetalles();	
+			}
+			Console.WriteLine("Introduzca el ID del producto que va a añadir unidades");
+			Id_Introducido = int.Parse(Console.ReadLine());
+			foreach(Productos p in ListaProductos) {
+				if(p.Id ==  Id_Introducido) {
+					Console.WriteLine("Unidades a añadir: ");
+					int Unidades_add = int.Parse(Console.ReadLine());
+					p.Unidades = Unidades_add + p.Unidades;
+					productocargado = "si";
+				}
+				if(productocargado == "Si") {
+					Console.WriteLine("Producto Cargado correctamente");
+				}
+				else {
+					Console.WriteLine("Error al encontrar el producto");
+				}
+			}
 		}
 		/*public void Salir() {
 			//Aqui guardamos el contenido de la lista en un fichero
