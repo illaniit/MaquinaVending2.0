@@ -16,6 +16,7 @@ namespace Maquinavending_23 {
 			InformacionNutricional = informacionutricional;
 		}
 		public override string MostrarDetalles() {
+			Console.WriteLine(base.MostrarDetalles() + $"Información Nutricional:{InformacionNutricional}");
 			return base.MostrarDetalles() + $"Información Nutricional:{InformacionNutricional}";
 
 		}

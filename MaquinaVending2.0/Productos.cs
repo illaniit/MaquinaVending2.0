@@ -29,6 +29,7 @@ namespace MaquinaVending2._0 {
 		}
 		//Vamos a crear el método para que el usuario pueda ver las características comúnes de todos los productos.
 		public virtual string MostrarDetalles() {
+			Console.WriteLine($"ID:{Id}|Nombre del producto:{Nombre}|Unidades disponibles:{Unidades}|Precio del producto: {PrecioUnitario}"	);
 			return $"ID:{Id}|Nombre del producto:{Nombre}|Unidades disponibles:{Unidades}|Precio del producto: {PrecioUnitario}";
 
 

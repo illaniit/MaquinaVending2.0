@@ -19,7 +19,9 @@ namespace MaquinaVending2._0 {
 		//Vamos a crear el método que permite al cliente ver la información de los productos utilizando el método de la clase Productos que posee los caracterísiticas  comunes de todos los productos.
 
 		public void MostrarInformacionProducto() {
-			foreach (Productos pr in ListaProductos) pr.MostrarDetalles();
+			foreach (Productos pr in ListaProductos) {
+				pr.MostrarDetalles();
+			}
 
 			Console.WriteLine("Introduce el ID para obtener mayor información");
 			//Creamos el id temporal para comprobar si ese id corresponde al del producto q iteramos d la lista. 
@@ -429,30 +431,30 @@ namespace MaquinaVending2._0 {
 
 			} while (eleccion != 4);
 
-			
+
 		}
 		public void AñadirExistencias() {
 			int Id_Introducido = 0; //Ponemos un id para que el usuario selecione el producto después del foreach
-			string productocargado = "no"; 
-			foreach(Productos p in ListaProductos) {
-				p.MostrarDetalles();	
+			string productocargado = "no";
+			foreach (Productos p in ListaProductos) {
+				p.MostrarDetalles();
 			}
 			Console.WriteLine("Introduzca el ID del producto que va a añadir unidades");
 			Id_Introducido = int.Parse(Console.ReadLine());
-			foreach(Productos p in ListaProductos) {
-				if(p.Id ==  Id_Introducido) {
+			foreach (Productos p in ListaProductos) {
+				if (p.Id == Id_Introducido) {
 					Console.WriteLine("Unidades a añadir: ");
 					int Unidades_add = int.Parse(Console.ReadLine());
 					p.Unidades = Unidades_add + p.Unidades;
 					productocargado = "si";
 				}
-			if(productocargado == "Si") {
+				if (productocargado == "Si") {
 					Console.WriteLine("Producto Cargado correctamente");
 				}
-			else{
+				else {
 					Console.WriteLine("Error al encontrar el producto");
 				}
-			Console.ReadKey();
+				Console.ReadKey();
 			}
 		}
 		/*public void Salir() {
