@@ -441,12 +441,13 @@ namespace MaquinaVending2._0 {
 					p.Unidades = Unidades_add + p.Unidades;
 					productocargado = "si";
 				}
-				if(productocargado == "Si") {
+			if(productocargado == "Si") {
 					Console.WriteLine("Producto Cargado correctamente");
 				}
-				else {
+			else{
 					Console.WriteLine("Error al encontrar el producto");
 				}
+			Console.ReadKey();
 			}
 		}
 		/*public void Salir() {
