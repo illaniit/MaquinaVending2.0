@@ -335,6 +335,8 @@ namespace MaquinaVending2._0 {
 							   //crear producto debe de hacer return de un producto el cual asignes a p
 							   // una vez asignado lo añades a la lista
 							CrearProducto();
+							Console.Clear();
+							Menu();
 							break;
 
 						case 3:
@@ -389,6 +391,8 @@ namespace MaquinaVending2._0 {
 							ProductosElectronicos productosElectronicos = new ProductosElectronicos();
 							productosElectronicos.PedirDatos();
 							ListaProductos.Add(productosElectronicos);
+							Console.Read();
+							Menu();
 							break;
 
 						case 2:
@@ -402,6 +406,7 @@ namespace MaquinaVending2._0 {
 							ProductosAlimenticios productosAlimenticios = new ProductosAlimenticios();
 							productosAlimenticios.PedirDatos();
 							ListaProductos.Add(productosAlimenticios);
+							Menu();
 							break;
 
 						case 4:
